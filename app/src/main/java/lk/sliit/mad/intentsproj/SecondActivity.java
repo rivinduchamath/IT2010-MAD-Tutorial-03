@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.DecimalFormat;
+
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText tvNumber1, tvNumber2;
     TextView tvCalculations;
@@ -71,13 +73,20 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.btnMultiplication:
                 tvCalculations.setText(number1 + " * " + number2 + " = " + (val1 * val2));
                 break;
+
             case R.id.btnDivide:
-                try {                                                    //Handle Exception if someone is try to divide by 0
-                    tvCalculations.setText(number1 + " / " + number2 + " = " + (val1 / val2));
-                    break;
-                } catch (ArithmeticException e) {
-                    tvCalculations.setText("Cannot divide by zero");
+                DecimalFormat df = new DecimalFormat();   //Set format
+                df.setMaximumFractionDigits(2);
+                String s;
+
+                if (df.format(val1 / val2).equals("-NaN")) {
+                    s = "Cannot divide by zero";
+                } else {
+                    s = df.format(val1 / val2);
                 }
+                tvCalculations.setText(number1 + " / " + number2 + " = " + s);
+                break;
+
         }//End Switch
     }//end onClick()
 }//End Class
