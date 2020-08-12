@@ -66,7 +66,6 @@
         android:id="@+id/btnOk"
         android:layout_width="127dp"
         android:layout_height="68dp"
-        android:onClick="displayToast"
         android:text="@android:string/ok"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,10 +75,10 @@
         />
 
     <Button
-        android:id="@+id/btnCustomToast "
+        android:id="@+id/btnCustomToast"
         android:layout_width="191dp"
         android:layout_height="55dp"
-        android:text="Custom Toast "
+        android:text="@string/custom_toast"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

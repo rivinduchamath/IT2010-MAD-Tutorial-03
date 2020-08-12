@@ -12,37 +12,37 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class FirstActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnOk,btnCustomToast ;
+    Button btnOk, btnCustomToast;
     EditText etNumber1, etNumber2;
-    String number1,number2;
+    String number1, number2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
-        etNumber1 = (EditText) findViewById(R.id.etNumber1);
-        etNumber2 = (EditText) findViewById(R.id.etNumber2);
-        btnOk = (Button) findViewById(R.id.btnOk);
-        btnCustomToast  = (Button) findViewById(R.id.btnCustomToast);
+        etNumber1 = findViewById(R.id.etNumber1);   //Edit Text For Number1
+        etNumber2 = findViewById(R.id.etNumber2);   //Edit Text For Number2
+        btnOk = findViewById(R.id.btnOk);           //Button Ok
+        btnCustomToast = findViewById(R.id.btnCustomToast);   // Button Custom Toast
         btnOk.setOnClickListener(this);
-        btnCustomToast .setOnClickListener(this);
+        btnCustomToast.setOnClickListener(this);
     }
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
+    public void onClick(View view) {          //On click Method to when click Buttons
 
-            case R.id.btnOk:
+        switch (view.getId()) {               //switch for 2 buttons
 
-                CharSequence message = "Sending message...";
+            case R.id.btnOk:                                         //Button Ok
+                CharSequence message = "Sending message...";         // Toast
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(FirstActivity.this, message, duration);
                 toast.setGravity(Gravity.TOP | Gravity.BOTTOM, 0, 0);
                 toast.show();
 
                 Intent intent = new Intent(this, SecondActivity.class);
-                number1 = etNumber1.getText().toString();
+                number1 = etNumber1.getText().toString();            //Get Values
                 number2 = etNumber2.getText().toString();
 
                 intent.putExtra("Value1", number1);
@@ -51,14 +51,10 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
                 finish();
                 break;
 
-            case R.id.btnCustomToast:
-                startActivity(new Intent(this,MainActivity.class));
+            case R.id.btnCustomToast:                                                //Button Custom Toast
+                startActivity(new Intent(this, MainActivity.class));  // Main Activity
                 break;
 
-        }
-    }
-
-
-    public void displayToast(View view) {
-    }
-}
+        }//End Switch
+    }//End OnClick
+}//End Class

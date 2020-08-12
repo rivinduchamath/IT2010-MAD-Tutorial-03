@@ -9,14 +9,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity { //Class Main Activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        LayoutInflater li = getLayoutInflater();
+        LayoutInflater li = getLayoutInflater();            //Custom Layout
         View layout = li.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.custom_toast_layout));
         Toast toast = new Toast(getApplicationContext());
         toast.setDuration(Toast.LENGTH_SHORT);
@@ -24,5 +24,5 @@ public class MainActivity extends AppCompatActivity {
         toast.setView(layout);
         toast.show();
 
-    }
-}
+    }//End onCreate
+}//End Class
