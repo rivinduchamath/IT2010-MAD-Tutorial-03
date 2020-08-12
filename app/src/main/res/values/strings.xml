@@ -4,4 +4,6 @@
     <string name="number_2">Number 2</string>
     <string name="value2">Value2</string>
     <string name="value1">Value1</string>
+    <string name="custom_toast_activity_main_xml">Custom Toast activity_main.xml</string>
+    <string name="javatpoint_custom_toast">JavaTpoint custom Toast</string>
 </resources>

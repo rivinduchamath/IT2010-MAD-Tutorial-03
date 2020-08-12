@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class FirstActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnOk;
+    Button btnOk,btnCustomToast ;
     EditText etNumber1, etNumber2;
     String number1,number2;
 
@@ -24,7 +24,9 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         etNumber1 = (EditText) findViewById(R.id.etNumber1);
         etNumber2 = (EditText) findViewById(R.id.etNumber2);
         btnOk = (Button) findViewById(R.id.btnOk);
+        btnCustomToast  = (Button) findViewById(R.id.btnCustomToast);
         btnOk.setOnClickListener(this);
+        btnCustomToast .setOnClickListener(this);
     }
 
     @Override
@@ -47,6 +49,10 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
                 intent.putExtra("Value2", number2);
                 startActivity(intent);
                 finish();
+                break;
+
+            case R.id.btnCustomToast:
+                startActivity(new Intent(this,MainActivity.class));
                 break;
 
         }
