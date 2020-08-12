@@ -48,6 +48,13 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         tvCalculations = findViewById(R.id.tvCalculations);
+
+        tvNumber1 = findViewById(R.id.etSecNumber1);
+        number1 =tvNumber1.getText().toString();
+
+        tvNumber2 = findViewById(R.id.etSecNumber2);
+        number2 = tvNumber2.getText().toString();
+
         val1 = Integer.parseInt(number1);
         val2 = Integer.parseInt(number2);
         switch (view.getId()) {
