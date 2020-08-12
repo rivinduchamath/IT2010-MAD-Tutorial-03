@@ -61,7 +61,6 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         val1 = Integer.parseInt(number1);
         val2 = Integer.parseInt(number2);
         switch (view.getId()) {
-
             case R.id.btnAddition:
                 tvCalculations.setText(number1 + " + " + number2 + " = " + (val1 + val2));
                 break;
@@ -72,9 +71,12 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
                 tvCalculations.setText(number1 + " * " + number2 + " = " + (val1 * val2));
                 break;
             case R.id.btnDivide:
-                tvCalculations.setText(number1 + " / " + number2 + " = " + (val1 / val2));
-                break;
-
+                try {
+                    tvCalculations.setText(number1 + " / " + number2 + " = " + (val1 / val2));
+                    break;
+                }catch (ArithmeticException e){
+                    tvCalculations.setText("Cannot divide by zero");
+                }
         }
     }
 }
