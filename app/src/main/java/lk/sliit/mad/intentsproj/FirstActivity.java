@@ -37,7 +37,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
                 CharSequence message = "Sending message...";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(FirstActivity.this, message, duration);
-                toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+                toast.setGravity(Gravity.TOP | Gravity.BOTTOM, 0, 0);
                 toast.show();
 
                 Intent intent = new Intent(this, SecondActivity.class);
