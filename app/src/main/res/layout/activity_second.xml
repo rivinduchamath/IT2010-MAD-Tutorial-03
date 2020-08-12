@@ -23,16 +23,19 @@
 
     <EditText
         android:id="@+id/etSecNumber1"
-        android:layout_width="242dp"
-        android:layout_height="53dp"
+        android:layout_width="245dp"
+        android:layout_height="47dp"
         android:layout_marginEnd="12dp"
-        android:text="@string/value1"
         android:layout_marginRight="12dp"
+        android:autofillHints=""
+        android:inputType="number"
+        android:text="@string/value1"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.192"
+        tools:ignore="LabelFor,MissingConstraints" />
 
     <TextView
         android:id="@+id/textSecViewNumber2"
@@ -46,21 +49,23 @@
         app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.364" />
+        app:layout_constraintVertical_bias="0.339" />
 
     <EditText
         android:id="@+id/etSecNumber2"
-        android:layout_width="239dp"
-        android:layout_height="61dp"
-        android:text="@string/value2"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
+        android:layout_width="243dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:autofillHints=""
+        android:inputType="number"
+        android:text="@string/value2"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.329"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.331"
+        tools:ignore="LabelFor,MissingConstraints" />
 
     <Button
         android:id="@+id/btnMultiplication"
@@ -105,7 +110,7 @@
         app:layout_constraintVertical_bias="0.587" />
 
     <Button
-        android:id="@+id/btnDivision"
+        android:id="@+id/btnDivide"
         android:layout_width="118dp"
         android:layout_height="49dp"
         android:text="/"
@@ -120,9 +125,11 @@
 
     <TextView
         android:id="@+id/tvCalculations"
-        android:layout_width="248dp"
-        android:layout_height="42dp"
-
+        android:layout_width="254dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
