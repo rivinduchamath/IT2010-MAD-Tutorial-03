@@ -1,6 +1,5 @@
 package lk.sliit.mad.intentsproj;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -49,7 +48,6 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(intent);
                 finish();
                 break;
-
 
         }
     }
